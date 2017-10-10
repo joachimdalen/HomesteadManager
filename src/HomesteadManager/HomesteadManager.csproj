@@ -60,6 +60,9 @@
     <Compile Include="Core\Controls\TextBoxWithHeight.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Managers\ConfigManager.cs" />
+    <Compile Include="Core\Models\Config.cs" />
+    <Compile Include="Core\Storage.cs" />
     <Compile Include="Core\Stylers\ControlStyler.cs" />
     <Compile Include="Core\Stylers\Colors.cs" />
     <Compile Include="Core\TextBoxPlaceholder.cs" />
@@ -101,6 +104,18 @@
     <Compile Include="UI\PrefrencesForm.Designer.cs">
       <DependentUpon>PrefrencesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Prefrences\BoxKeysPrefUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Prefrences\BoxKeysPrefUc.Designer.cs">
+      <DependentUpon>BoxKeysPrefUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Prefrences\BoxPrefUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Prefrences\BoxPrefUc.Designer.cs">
+      <DependentUpon>BoxPrefUc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Prefrences\GeneralPrefUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PrefrencesForm.resx">
       <DependentUpon>PrefrencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Prefrences\BoxKeysPrefUc.resx">
+      <DependentUpon>BoxKeysPrefUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Prefrences\BoxPrefUc.resx">
+      <DependentUpon>BoxPrefUc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Prefrences\GeneralPrefUc.resx">
       <DependentUpon>GeneralPrefUc.cs</DependentUpon>
@@ -205,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\database_yellow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Validators\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

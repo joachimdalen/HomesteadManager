@@ -59,7 +59,7 @@ namespace HomesteadManager {
             toolStripStatusLabel.Text = status;
         }
 
-        private void foldersToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void FoldersToolStripMenuItem_Click(object sender, EventArgs e) {
             var folderForm = new FoldersForm();
             ShowForm(folderForm, DockState.Document);
         }

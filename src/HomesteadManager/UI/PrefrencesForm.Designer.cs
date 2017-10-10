@@ -75,7 +75,11 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.TvSelector);
+            this.MaximumSize = new System.Drawing.Size(639, 380);
+            this.MinimumSize = new System.Drawing.Size(639, 380);
             this.Name = "PrefrencesForm";
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Prefrences";
             this.Load += new System.EventHandler(this.PrefrencesForm_Load);

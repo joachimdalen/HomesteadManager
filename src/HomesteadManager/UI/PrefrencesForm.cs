@@ -13,6 +13,13 @@ namespace HomesteadManager.UI {
         private void PrefrencesForm_Load(object sender, EventArgs e) {
             var general = new GeneralPrefUc();
             var generalNode = AddToTree(null, general);
+
+            var boxSettings = new BoxPrefUc();
+            var boxSettingsNode = AddToTree(null, boxSettings);
+
+            var boxKeys = new BoxKeysPrefUc();
+            var boxKeysNode = AddToTree(boxSettingsNode, boxKeys);
+        
             TvSelector.SelectedNode = generalNode;
         }
 

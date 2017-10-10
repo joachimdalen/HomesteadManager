@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using HomesteadManager.Core.Controls;
 
 namespace HomesteadManager.Core.Stylers {
     internal class ControlStyler {
@@ -16,12 +17,29 @@ namespace HomesteadManager.Core.Stylers {
                 }
             }
         }
+
+        internal void StylesControlsFromArray(Control[] controls) {
+            foreach (var control in controls) {
+                if (control == null)
+                    continue;
+                if (control.GetType() == typeof(Button)) {
+                    StyleButton(control as Button);
+                } else if (control.GetType() == typeof(DataGridView)) {
+                    StyleGrid(control as DataGridView);
+                } else if (control.GetType() == typeof(TextBox) || control.GetType() == typeof(TextBoxWithHeight)) {
+                    StyleTextBox(control as TextBox);
+                }
+            }
+        }
         internal void StyleButton(Button btn) {
             btn.FlatStyle = FlatStyle.Popup;
             btn.ForeColor = Colors.Text;
             btn.BackColor = Colors.Background;
         }
 
+        internal void StyleComboBox(ComboBox box) {
+            box.BackColor = Colors.Background;
+        }
 
         internal void StyleGrid(DataGridView view) {
             var styleOne = new DataGridViewCellStyle {
@@ -32,7 +50,7 @@ namespace HomesteadManager.Core.Stylers {
                 BackColor = Colors.DarkBackground,
                 ForeColor = Colors.Text
             };
-            view.BackgroundColor = Colors.DarkBackground;
+            view.BackgroundColor = Colors.Background;
             view.BorderStyle = BorderStyle.None;
             view.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             view.ColumnHeadersDefaultCellStyle = styleOne;
