@@ -39,7 +39,7 @@ namespace HomesteadManager {
         }
 
         private void DatabasesToolStripMenuItem_Click(object sender, EventArgs e) {
-            var databasesFrom = new DatabasesFrom();
+            var databasesFrom = new DatabasesForm();
             ShowForm(databasesFrom, DockState.DockRight);
         }
 
@@ -62,6 +62,16 @@ namespace HomesteadManager {
         private void FoldersToolStripMenuItem_Click(object sender, EventArgs e) {
             var folderForm = new FoldersForm();
             ShowForm(folderForm, DockState.Document);
+        }
+
+        private void FileExplorerToolStripMenuItem_Click(object sender, EventArgs e) {
+            var fileExplorerForm = new FileExplorerForm();
+            ShowForm(fileExplorerForm, DockState.DockLeft);
+        }
+
+        private void HostsFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            var hostsForm = new HostsForm();
+            ShowForm(hostsForm, DockState.Document);
         }
     }
 }

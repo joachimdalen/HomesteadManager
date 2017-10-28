@@ -20,11 +20,12 @@ namespace HomesteadManager.Core {
                     textBox.Text = (string)textBox.Tag;
                 }
             };
-            //textBox.TextChanged += (s, e) => {
-            //    if (textBox.Text == string.Empty) {
-            //        textBox.Text = (string)textBox.Tag;
-            //    }
-            //};
+
+            textBox.TextChanged += (s, e) => {
+                if (textBox.Text == string.Empty && !textBox.Focused) {
+                    textBox.Text = (string)textBox.Tag;
+                }
+            };
         }
 
     }

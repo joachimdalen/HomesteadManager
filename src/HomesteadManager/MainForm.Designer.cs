@@ -34,14 +34,16 @@
             this.databasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.vS2015DarkTheme = new WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme();
             this.visualStudioToolStripExtender = new WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender(this.components);
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.hostsFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -96,7 +98,9 @@
             this.homesteadBoxControlsToolStripMenuItem,
             this.databasesToolStripMenuItem,
             this.outputToolStripMenuItem,
-            this.foldersToolStripMenuItem});
+            this.foldersToolStripMenuItem,
+            this.fileExplorerToolStripMenuItem,
+            this.hostsFileToolStripMenuItem});
             this.viewToolStripMenuItem.Image = global::HomesteadManager.Properties.Resources.eye_red;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -132,6 +136,13 @@
             this.foldersToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.foldersToolStripMenuItem.Text = "Folders";
             this.foldersToolStripMenuItem.Click += new System.EventHandler(this.FoldersToolStripMenuItem_Click);
+            // 
+            // fileExplorerToolStripMenuItem
+            // 
+            this.fileExplorerToolStripMenuItem.Name = "fileExplorerToolStripMenuItem";
+            this.fileExplorerToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
+            this.fileExplorerToolStripMenuItem.Text = "File Explorer";
+            this.fileExplorerToolStripMenuItem.Click += new System.EventHandler(this.FileExplorerToolStripMenuItem_Click);
             // 
             // dockPanel
             // 
@@ -171,20 +182,27 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
-            // visualStudioToolStripExtender
+            // toolStripStatusLabel1
             // 
-            this.visualStudioToolStripExtender.DefaultRenderer = null;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(946, 17);
+            this.toolStripStatusLabel1.Spring = true;
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // toolStripStatusLabel1
+            // visualStudioToolStripExtender
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(915, 17);
-            this.toolStripStatusLabel1.Spring = true;
+            this.visualStudioToolStripExtender.DefaultRenderer = null;
+            // 
+            // hostsFileToolStripMenuItem
+            // 
+            this.hostsFileToolStripMenuItem.Name = "hostsFileToolStripMenuItem";
+            this.hostsFileToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
+            this.hostsFileToolStripMenuItem.Text = "Hosts File";
+            this.hostsFileToolStripMenuItem.Click += new System.EventHandler(this.HostsFileToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -228,6 +246,8 @@
         private System.Windows.Forms.ToolStripMenuItem foldersToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripMenuItem fileExplorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hostsFileToolStripMenuItem;
     }
 }
 

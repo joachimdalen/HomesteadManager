@@ -42,6 +42,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 254);
             this.Controls.Add(this.richTextBox1);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((((WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Name = "OutputForm";
             this.Text = "OutputForm";
             this.Load += new System.EventHandler(this.OutputForm_Load);

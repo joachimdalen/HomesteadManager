@@ -38,6 +38,7 @@
             this.textBoxWithHeight2 = new HomesteadManager.Core.Controls.TextBoxWithHeight();
             this.comType = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEditSelected = new System.Windows.Forms.Button();
             this.btnRemoveSelected = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -205,9 +207,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Controls.Add(this.btnSave, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditSelected, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnRemoveSelected, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 46);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -217,13 +217,32 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(808, 45);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel3.SetColumnSpan(this.tableLayoutPanel4, 2);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.Controls.Add(this.btnSave, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnEditSelected, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnRemoveSelected, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(407, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(398, 39);
+            this.tableLayoutPanel4.TabIndex = 3;
+            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(609, 3);
+            this.btnSave.Location = new System.Drawing.Point(321, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(196, 23);
+            this.btnSave.Size = new System.Drawing.Size(74, 23);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -232,20 +251,18 @@
             // 
             this.btnEditSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditSelected.Location = new System.Drawing.Point(407, 3);
+            this.btnEditSelected.Location = new System.Drawing.Point(221, 3);
             this.btnEditSelected.Name = "btnEditSelected";
-            this.btnEditSelected.Size = new System.Drawing.Size(196, 23);
+            this.btnEditSelected.Size = new System.Drawing.Size(94, 23);
             this.btnEditSelected.TabIndex = 1;
             this.btnEditSelected.Text = "Edit Selected";
             this.btnEditSelected.UseVisualStyleBackColor = true;
             // 
             // btnRemoveSelected
             // 
-            this.btnRemoveSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveSelected.Location = new System.Drawing.Point(205, 3);
+            this.btnRemoveSelected.Location = new System.Drawing.Point(121, 3);
             this.btnRemoveSelected.Name = "btnRemoveSelected";
-            this.btnRemoveSelected.Size = new System.Drawing.Size(196, 23);
+            this.btnRemoveSelected.Size = new System.Drawing.Size(94, 23);
             this.btnRemoveSelected.TabIndex = 2;
             this.btnRemoveSelected.Text = "Remove Selected";
             this.btnRemoveSelected.UseVisualStyleBackColor = true;
@@ -256,14 +273,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 449);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Name = "FoldersForm";
-            this.Text = "FoldersForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "Folders";
             this.Load += new System.EventHandler(this.FoldersForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -288,5 +310,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEditSelected;
         private System.Windows.Forms.Button btnRemoveSelected;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
     }
 }
