@@ -60,8 +60,20 @@
     <Compile Include="Core\Controls\TextBoxWithHeight.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Extensions\StringExtensions.cs" />
     <Compile Include="Core\Managers\ConfigManager.cs" />
+    <Compile Include="Core\Managers\FileSystemManager.cs" />
+    <Compile Include="Core\Managers\OutputManager.cs" />
+    <Compile Include="Core\Managers\SetupManager.cs" />
     <Compile Include="Core\Models\Config.cs" />
+    <Compile Include="Core\Models\Folder.cs" />
+    <Compile Include="Core\Models\HomesteadConfig.cs" />
+    <Compile Include="Core\Models\HostsFile.cs" />
+    <Compile Include="Core\Models\Network.cs" />
+    <Compile Include="Core\Models\Port.cs" />
+    <Compile Include="Core\Models\Site.cs" />
+    <Compile Include="Core\Models\SiteParam.cs" />
+    <Compile Include="Core\Models\SystemHost.cs" />
     <Compile Include="Core\Storage.cs" />
     <Compile Include="Core\Stylers\ControlStyler.cs" />
     <Compile Include="Core\Stylers\Colors.cs" />
@@ -74,11 +86,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\DatabasesFrom.cs">
+    <Compile Include="UI\DatabasesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\DatabasesFrom.Designer.cs">
-      <DependentUpon>DatabasesFrom.cs</DependentUpon>
+    <Compile Include="UI\DatabasesForm.Designer.cs">
+      <DependentUpon>DatabasesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileExplorerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileExplorerForm.Designer.cs">
+      <DependentUpon>FileExplorerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FoldersForm.cs">
       <SubType>Form</SubType>
@@ -91,6 +109,12 @@
     </Compile>
     <Compile Include="UI\HomesteadControlsForm.Designer.cs">
       <DependentUpon>HomesteadControlsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HostsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HostsForm.Designer.cs">
+      <DependentUpon>HostsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\OutputForm.cs">
       <SubType>Form</SubType>
@@ -135,14 +159,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\DatabasesFrom.resx">
-      <DependentUpon>DatabasesFrom.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DatabasesForm.resx">
+      <DependentUpon>DatabasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileExplorerForm.resx">
+      <DependentUpon>FileExplorerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FoldersForm.resx">
       <DependentUpon>FoldersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HomesteadControlsForm.resx">
       <DependentUpon>HomesteadControlsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HostsForm.resx">
+      <DependentUpon>HostsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\OutputForm.resx">
       <DependentUpon>OutputForm.cs</DependentUpon>
