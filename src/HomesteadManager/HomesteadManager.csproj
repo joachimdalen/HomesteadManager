@@ -63,6 +63,7 @@
     <Compile Include="Core\Extensions\StringExtensions.cs" />
     <Compile Include="Core\Managers\ConfigManager.cs" />
     <Compile Include="Core\Managers\FileSystemManager.cs" />
+    <Compile Include="Core\Managers\HostsFileManager.cs" />
     <Compile Include="Core\Managers\OutputManager.cs" />
     <Compile Include="Core\Managers\SetupManager.cs" />
     <Compile Include="Core\Models\Config.cs" />
@@ -259,6 +260,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Validators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

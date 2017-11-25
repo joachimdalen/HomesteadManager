@@ -18,8 +18,8 @@ namespace HomesteadManager.UI {
         }
 
         private void FileExplorerForm_Load(object sender, EventArgs e) {
-            ControlStyler styler = new ControlStyler();
-            styler.SetBackgroundAndForground(TvExplorer);
+            //ControlStyler styler = new ControlStyler();
+            //styler.SetBackgroundAndForground(TvExplorer);
             LoadTree();
         }
 

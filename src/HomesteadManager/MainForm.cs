@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HomesteadManager.Core.Managers;
 using HomesteadManager.UI;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -71,6 +72,8 @@ namespace HomesteadManager {
 
         private void HostsFileToolStripMenuItem_Click(object sender, EventArgs e) {
             var hostsForm = new HostsForm();
+            if (!hostsForm.InitForm())
+                return;
             ShowForm(hostsForm, DockState.Document);
         }
     }

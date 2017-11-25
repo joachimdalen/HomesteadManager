@@ -39,6 +39,7 @@ namespace HomesteadManager.Core.Stylers {
 
         internal void StyleComboBox(ComboBox box) {
             box.BackColor = Colors.Background;
+            box.FlatStyle = FlatStyle.Popup;
         }
 
         internal void StyleGrid(DataGridView view) {

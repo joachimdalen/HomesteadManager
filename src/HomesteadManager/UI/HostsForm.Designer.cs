@@ -35,7 +35,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBoxWithHeight3 = new HomesteadManager.Core.Controls.TextBoxWithHeight();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comDomain = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,7 +122,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBoxWithHeight1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.textBoxWithHeight3, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.comDomain, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -200,17 +200,20 @@
             this.textBoxWithHeight3.Size = new System.Drawing.Size(294, 20);
             this.textBoxWithHeight3.TabIndex = 8;
             // 
-            // comboBox1
+            // comDomain
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(248, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 21);
-            this.comboBox1.TabIndex = 9;
+            this.comDomain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comDomain.FormattingEnabled = true;
+            this.comDomain.Location = new System.Drawing.Point(248, 18);
+            this.comDomain.Name = "comDomain";
+            this.comDomain.Size = new System.Drawing.Size(263, 21);
+            this.comDomain.TabIndex = 9;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIP,
@@ -268,8 +271,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 449);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((((WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Name = "HostsForm";
-            this.Text = "HostsForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "Windows Hosts";
             this.Load += new System.EventHandler(this.HostsForm_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -302,6 +311,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCommented;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Core.Controls.TextBoxWithHeight textBoxWithHeight3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comDomain;
     }
 }

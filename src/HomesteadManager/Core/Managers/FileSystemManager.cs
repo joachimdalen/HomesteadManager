@@ -5,7 +5,10 @@ using System.IO;
 namespace HomesteadManager.Core.Managers {
     internal class FileSystemManager {
         private readonly string _hostsPath =
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers", "etc");
+
+        private readonly string _homesteadPath =
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".homestead");
 
         public FileSystemManager() {
         }
@@ -15,7 +18,11 @@ namespace HomesteadManager.Core.Managers {
         }
 
         public bool DetectHomestead() {
-            return false;
+            return File.Exists(Path.Combine(_homesteadPath, "homestead.yaml"));
+        }
+
+        public string GetHostsPath() {
+            return Path.Combine(_hostsPath, "hosts");
         }
     }
 }
